@@ -789,7 +789,7 @@ class BoardGameGeek(BoardGameGeekNetworkAPI):
         kwargs["description"] = xml_subelement_text(root, "description", convert=html_parser.unescape, quiet=True)
 
         # These XML elements have a numberic value, attempt to convert them to integers
-        for i in ["yearpublished", "minplayers", "maxplayers", "playingtime", "minage"]:
+        for i in ["yearpublished", "minplayers", "maxplayers", "playingtime", "minage", "minplaytime", "maxplaytime"]:
             kwargs[i] = xml_subelement_attr(root, i, convert=int, quiet=True)
 
         # What's the name of the game :P

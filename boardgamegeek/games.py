@@ -233,6 +233,8 @@ class BoardGame(Thing):
         log.info("minimum players   : {}".format(self.min_players))
         log.info("maximum players   : {}".format(self.max_players))
         log.info("playing time      : {}".format(self.playing_time))
+        log.info("minimum play time : {}".format(self.min_playing_time))
+        log.info("maximum play time : {}".format(self.max_playing_time))
         log.info("minimum age       : {}".format(self.min_age))
         log.info("thumbnail         : {}".format(self.thumbnail))
         log.info("image             : {}".format(self.image))
@@ -444,6 +446,24 @@ class BoardGame(Thing):
         :return: ``None`` if n/a
         """
         return self._data.get("playingtime")
+
+    @property
+    def min_playing_time(self):
+        """
+        :return: minimum playing time
+        :rtype: integer
+        :return: ``None`` if n/a
+        """
+        return self._data.get("minplaytime")
+
+    @property
+    def max_playing_time(self):
+        """
+        :return: maximum playing time
+        :rtype: integer
+        :return: ``None`` if n/a
+        """
+        return self._data.get("maxplaytime")
 
     @property
     def min_age(self):

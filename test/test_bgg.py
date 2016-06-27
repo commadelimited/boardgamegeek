@@ -338,7 +338,7 @@ def check_game(game):
     assert "Economic" in game.categories
     assert "Farming" in game.categories
 
-    assert game.families == ["Agricola", "Animals: Cattle", "Animals: Sheep", "Harvest Series", "Solitaire Games"]
+    assert game.families == ["Agricola", "Animals: Cattle", "Animals: Sheep", "Harvest Series", "Solitaire Games", "Tableau Building"]
 
     assert game.designers == ["Uwe Rosenberg"]
 
